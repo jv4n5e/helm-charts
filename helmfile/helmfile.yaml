@@ -1,0 +1,9 @@
+releases:
+    - name: postgresql-ha
+      chart: ./charts/postgresql-ha
+      values:
+          - ./values/postgresql-ha.values.yaml
+    - name: kube-prometheus-stack
+      chart: ./charts/kube-prometheus-stack
+      values:
+          - ./values/kube-prometheus-stack.values.yaml

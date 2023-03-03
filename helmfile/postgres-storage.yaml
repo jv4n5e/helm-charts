@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: postgresql-ha-pv-a
+  labels:
+    type: local
+spec:
+  capacity:
+    storage: 8Gi
+  accessModes:
+    - ReadWriteMany
+  storageClassName: manual
+  hostPath:
+    path: /pv-a
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: postgresql-ha-pv-b
+  labels:
+    type: local
+spec:
+  capacity:
+    storage: 8Gi
+  accessModes:
+    - ReadWriteMany
+  storageClassName: manual
+  hostPath:
+    path: /pv-b
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: postgresql-ha-pv-c
+  labels:
+    type: local
+spec:
+  capacity:
+    storage: 8Gi
+  accessModes:
+    - ReadWriteMany
+  storageClassName: manual
+  hostPath:
+    path: /pv-c
